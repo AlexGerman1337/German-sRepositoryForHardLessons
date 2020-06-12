@@ -1,8 +1,35 @@
-let num = 266219;
-const arrayOfDigits = Array.from(String(num), Number);
-let numSum = arrayOfDigits.reduce((a,b)=>a*b),
-    numDegree = numSum**3;
+let lang = 'ru';
 
-console.log("numSum:", numSum); 
-console.log("numDegree:", numDegree)
-console.log(String(numDegree).slice(0,2))
+    if (lang == 'ru') {
+	    var arr = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+  }
+  
+    if (lang == 'en') {
+	    arr = ['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'];
+  }
+
+    alert(arr);
+
+
+
+let switchLang = 'ru';
+  switch (switchLang){
+    case 'ru':
+      alert('пн, вт, ср, чт, пт, сб, вс');
+    break;
+    case 'en':
+      alert('mn, ts, wd, th, fr, st, sn');
+    break;
+}
+
+let lang03 = 'en';
+let arr03 = {'ru':['пн','вт','ср','чт','пт','сб','вс'],
+'en':['mo','tu','we','th','fr','sa','su']};
+
+alert(arr03[lang03]);
+
+
+let namePerson = prompt("Введите ваше имя");
+namePerson === "Артем" ? console.log("директор") :
+namePerson === "Максим" ? console.log("преподаватель") : 
+console.log("cтудент");
